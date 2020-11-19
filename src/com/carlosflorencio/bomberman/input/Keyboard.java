@@ -30,5 +30,5 @@ public class Keyboard implements KeyListener {
 		keys[e.getKeyCode()] = false;
 		
 	}
-
+// end
 }
