@@ -15,7 +15,7 @@ public class Keyboard implements KeyListener {
 		right = keys[KeyEvent.VK_RIGHT] || keys[KeyEvent.VK_D];
 		space = keys[KeyEvent.VK_SPACE] || keys[KeyEvent.VK_X];
 	}
-
+//ok
 	@Override
 	public void keyTyped(KeyEvent e) {}
 
