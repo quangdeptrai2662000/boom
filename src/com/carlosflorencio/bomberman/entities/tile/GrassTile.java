@@ -1,8 +1,8 @@
 package com.carlosflorencio.bomberman.entities.tile;
 
 
-import com.carlosflorencio.bomberman.entities.Entity;
 import com.carlosflorencio.bomberman.graphics.Sprite;
+import com.carlosflorencio.bomberman.entities.Entity;
 
 public class GrassTile extends Tile {
 

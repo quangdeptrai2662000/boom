@@ -1,9 +1,9 @@
 package com.carlosflorencio.bomberman.entities.tile.destroyable;
 
+import com.carlosflorencio.bomberman.graphics.Sprite;
 import com.carlosflorencio.bomberman.entities.Entity;
 import com.carlosflorencio.bomberman.entities.bomb.DirectionalExplosion;
 import com.carlosflorencio.bomberman.entities.tile.Tile;
-import com.carlosflorencio.bomberman.graphics.Sprite;
 
 public class DestroyableTile extends Tile {
 

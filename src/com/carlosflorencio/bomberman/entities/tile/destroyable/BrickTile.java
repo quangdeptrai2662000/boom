@@ -1,12 +1,14 @@
 package com.carlosflorencio.bomberman.entities.tile.destroyable;
 
 
-import com.carlosflorencio.bomberman.entities.Entity;
-import com.carlosflorencio.bomberman.entities.bomb.DirectionalExplosion;
-import com.carlosflorencio.bomberman.entities.mob.enemy.Kondoria;
+import com.carlosflorencio.bomberman.entities.mob.enemy.Boss;
+import com.carlosflorencio.bomberman.entities.mob.enemy.Stupid;
 import com.carlosflorencio.bomberman.graphics.Screen;
 import com.carlosflorencio.bomberman.graphics.Sprite;
 import com.carlosflorencio.bomberman.level.Coordinates;
+import com.carlosflorencio.bomberman.entities.Entity;
+import com.carlosflorencio.bomberman.entities.bomb.DirectionalExplosion;
+import com.carlosflorencio.bomberman.entities.mob.enemy.Kondoria;
 
 public class BrickTile extends DestroyableTile {
 	
@@ -39,7 +41,7 @@ public class BrickTile extends DestroyableTile {
 		if(e instanceof DirectionalExplosion)
 			destroy();
 		
-		if(e instanceof Kondoria)
+		if(e instanceof Kondoria || e instanceof Stupid || e instanceof Boss)
 			return true;
 			
 		return false;

@@ -14,7 +14,7 @@ public class Kondoria extends Enemy {
 		
 		_sprite = Sprite.kondoria_right1;
 		
-		_ai = new AIMedium(_board.getPlayer(), this); //TODO: implement AIHigh 
+		_ai = new AIMedium(_board.getPlayer(), this); //TODO: implement AIHigh
 		_direction  = _ai.calculateDirection();
 	}
 	/*

@@ -1,9 +1,9 @@
 package com.carlosflorencio.bomberman.entities.bomb;
 
 import com.carlosflorencio.bomberman.Board;
+import com.carlosflorencio.bomberman.graphics.Screen;
 import com.carlosflorencio.bomberman.entities.Entity;
 import com.carlosflorencio.bomberman.entities.mob.Mob;
-import com.carlosflorencio.bomberman.graphics.Screen;
 
 public class DirectionalExplosion extends Entity {
 

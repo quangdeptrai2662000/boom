@@ -1,7 +1,7 @@
 package com.carlosflorencio.bomberman.entities.tile.powerup;
 
-import com.carlosflorencio.bomberman.entities.tile.Tile;
 import com.carlosflorencio.bomberman.graphics.Sprite;
+import com.carlosflorencio.bomberman.entities.tile.Tile;
 
 public abstract class Powerup extends Tile {
 

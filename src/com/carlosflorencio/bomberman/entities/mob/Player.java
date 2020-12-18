@@ -1,14 +1,15 @@
 package com.carlosflorencio.bomberman.entities.mob;
 
 import java.awt.Color;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 import com.carlosflorencio.bomberman.Board;
 import com.carlosflorencio.bomberman.Game;
-import com.carlosflorencio.bomberman.entities.Entity;
-import com.carlosflorencio.bomberman.entities.Message;
 import com.carlosflorencio.bomberman.entities.bomb.Bomb;
 import com.carlosflorencio.bomberman.entities.bomb.DirectionalExplosion;
 import com.carlosflorencio.bomberman.entities.mob.enemy.Enemy;
@@ -17,6 +18,9 @@ import com.carlosflorencio.bomberman.graphics.Screen;
 import com.carlosflorencio.bomberman.graphics.Sprite;
 import com.carlosflorencio.bomberman.input.Keyboard;
 import com.carlosflorencio.bomberman.level.Coordinates;
+import com.carlosflorencio.bomberman.entities.Entity;
+import com.carlosflorencio.bomberman.entities.Message;
+
 
 public class Player extends Mob {
 	
@@ -93,7 +97,7 @@ public class Player extends Mob {
 			_timeBetweenPutBombs = 30;
 		}
 	}
-	
+
 	protected void placeBomb(int x, int y) {
 		Bomb b = new Bomb(x, y, _board);
 		_board.addBomb(b);
@@ -121,7 +125,7 @@ public class Player extends Mob {
 	@Override
 	public void kill() {
 		if(!_alive) return;
-		
+		playSound("person_die.wav");
 		_alive = false;
 		
 		_board.addLives(-1);
@@ -129,10 +133,15 @@ public class Player extends Mob {
 		Message msg = new Message("-1 LIVE", getXMessage(), getYMessage(), 2, Color.white, 14);
 		_board.addMessage(msg);
 	}
-	
-	@Override
+
+
+
+		@Override
 	protected void afterKill() {
-		if(_timeAfter > 0) --_timeAfter;
+		if(_timeAfter > 0) {
+			--_timeAfter;
+
+		}
 		else {
 			if(_bombs.size() == 0) {
 				
@@ -142,6 +151,7 @@ public class Player extends Mob {
 					_board.restartLevel();
 			}
 		}
+
 	}
 	
 	/*

@@ -1,9 +1,9 @@
 package com.carlosflorencio.bomberman.entities.tile;
 
 import com.carlosflorencio.bomberman.Board;
+import com.carlosflorencio.bomberman.graphics.Sprite;
 import com.carlosflorencio.bomberman.entities.Entity;
 import com.carlosflorencio.bomberman.entities.mob.Player;
-import com.carlosflorencio.bomberman.graphics.Sprite;
 
 public class PortalTile extends Tile {
 

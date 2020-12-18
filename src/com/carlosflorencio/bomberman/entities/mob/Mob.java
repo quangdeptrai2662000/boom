@@ -2,8 +2,13 @@ package com.carlosflorencio.bomberman.entities.mob;
 
 import com.carlosflorencio.bomberman.Board;
 import com.carlosflorencio.bomberman.Game;
-import com.carlosflorencio.bomberman.entities.AnimatedEntitiy;
 import com.carlosflorencio.bomberman.graphics.Screen;
+import com.carlosflorencio.bomberman.entities.AnimatedEntitiy;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import java.io.File;
 
 public abstract class Mob extends AnimatedEntitiy {
 	
@@ -54,5 +59,35 @@ public abstract class Mob extends AnimatedEntitiy {
 	protected double getYMessage() {
 		return (_y* Game.SCALE) - (_sprite.SIZE / 2 * Game.SCALE);
 	}
-	
+
+	public static void playSound(String soundName)
+	{
+		try
+		{
+			AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile( ));
+			Clip clip = AudioSystem.getClip( );
+			clip.open(audioInputStream);
+			clip.start( );
+		}
+		catch(Exception ex)
+		{
+			System.out.println("Error with playing sound.");
+			ex.printStackTrace( );
+		}
+	}
+	public static void stopSound(String soundName)
+	{
+		try
+		{
+			AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile( ));
+			Clip clip = AudioSystem.getClip( );
+			clip.open(audioInputStream);
+			clip.stop( );
+		}
+		catch(Exception ex)
+		{
+			System.out.println("Error with playing sound.");
+			ex.printStackTrace( );
+		}
+	}
 }

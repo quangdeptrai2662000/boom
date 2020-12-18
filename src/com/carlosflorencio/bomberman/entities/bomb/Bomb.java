@@ -2,13 +2,16 @@ package com.carlosflorencio.bomberman.entities.bomb;
 
 import com.carlosflorencio.bomberman.Board;
 import com.carlosflorencio.bomberman.Game;
+import com.carlosflorencio.bomberman.entities.mob.enemy.Balloom;
+import com.carlosflorencio.bomberman.entities.mob.enemy.Boss;
+import com.carlosflorencio.bomberman.entities.mob.enemy.Intelligent;
+import com.carlosflorencio.bomberman.graphics.Screen;
+import com.carlosflorencio.bomberman.graphics.Sprite;
+import com.carlosflorencio.bomberman.level.Coordinates;
 import com.carlosflorencio.bomberman.entities.AnimatedEntitiy;
 import com.carlosflorencio.bomberman.entities.Entity;
 import com.carlosflorencio.bomberman.entities.mob.Mob;
 import com.carlosflorencio.bomberman.entities.mob.Player;
-import com.carlosflorencio.bomberman.graphics.Screen;
-import com.carlosflorencio.bomberman.graphics.Sprite;
-import com.carlosflorencio.bomberman.level.Coordinates;
 
 public class Bomb extends AnimatedEntitiy {
 
@@ -121,6 +124,28 @@ public class Bomb extends AnimatedEntitiy {
 				_allowedToPassThru = false;
 			}
 			
+			return _allowedToPassThru;
+		}
+
+		if(e instanceof Boss) {
+			double diffX = e.getX() - Coordinates.tileToPixel(getX());
+			double diffY = e.getY() - Coordinates.tileToPixel(getY());
+
+			if(!(diffX >= -10 && diffX < 16 && diffY >= 1 && diffY <= 28)) { // differences to see if the player has moved out of the bomb, tested values
+				_allowedToPassThru = true;
+			}
+
+			return _allowedToPassThru;
+		}
+
+		if(e instanceof Intelligent) {
+			double diffX = e.getX() - Coordinates.tileToPixel(getX());
+			double diffY = e.getY() - Coordinates.tileToPixel(getY());
+
+			if(!(diffX >= -10 && diffX < 16 && diffY >= 1 && diffY <= 28)) { // differences to see if the player has moved out of the bomb, tested values
+				_allowedToPassThru = true;
+			}
+
 			return _allowedToPassThru;
 		}
 		

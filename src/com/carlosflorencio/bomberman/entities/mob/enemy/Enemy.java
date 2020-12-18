@@ -4,15 +4,15 @@ import java.awt.Color;
 
 import com.carlosflorencio.bomberman.Board;
 import com.carlosflorencio.bomberman.Game;
-import com.carlosflorencio.bomberman.entities.Entity;
-import com.carlosflorencio.bomberman.entities.Message;
 import com.carlosflorencio.bomberman.entities.bomb.DirectionalExplosion;
-import com.carlosflorencio.bomberman.entities.mob.Mob;
-import com.carlosflorencio.bomberman.entities.mob.Player;
 import com.carlosflorencio.bomberman.entities.mob.enemy.ai.AI;
 import com.carlosflorencio.bomberman.graphics.Screen;
 import com.carlosflorencio.bomberman.graphics.Sprite;
 import com.carlosflorencio.bomberman.level.Coordinates;
+import com.carlosflorencio.bomberman.entities.Entity;
+import com.carlosflorencio.bomberman.entities.Message;
+import com.carlosflorencio.bomberman.entities.mob.Mob;
+import com.carlosflorencio.bomberman.entities.mob.Player;
 
 public abstract class Enemy extends Mob {
 
@@ -158,6 +158,7 @@ public abstract class Enemy extends Mob {
 	@Override
 	public void kill() {
 		if(_alive == false) return;
+		playSound("enemy_die.wav");
 		_alive = false;
 		
 		_board.addPoints(_points);

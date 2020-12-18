@@ -1,10 +1,10 @@
 package com.carlosflorencio.bomberman.entities.bomb;
 
 import com.carlosflorencio.bomberman.Board;
-import com.carlosflorencio.bomberman.entities.Entity;
-import com.carlosflorencio.bomberman.entities.mob.Mob;
 import com.carlosflorencio.bomberman.graphics.Screen;
 import com.carlosflorencio.bomberman.graphics.Sprite;
+import com.carlosflorencio.bomberman.entities.Entity;
+import com.carlosflorencio.bomberman.entities.mob.Mob;
 
 
 public class Explosion extends Entity {
@@ -14,6 +14,7 @@ public class Explosion extends Entity {
 	protected Sprite _sprite1, _sprite2;
 	
 	public Explosion(int x, int y, int direction, boolean last, Board board) {
+		playSound("quang2.wav");
 		_x = x;
 		_y = y;
 		_last = last;
@@ -49,6 +50,7 @@ public class Explosion extends Entity {
 				}
 				break;
 		}
+
 	}
 	
 	@Override

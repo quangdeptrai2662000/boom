@@ -95,7 +95,19 @@ public class Sprite {
 	public static Sprite minvo_right3 = new Sprite(16, 9, 7, SpriteSheet.tiles, 16, 16);
 	
 	public static Sprite minvo_dead = new Sprite(16, 8, 8, SpriteSheet.tiles, 16, 16);
-	
+
+
+	//stupid
+	public static Sprite stupid1 = new Sprite(16, 7, 6, SpriteSheet.tiles, 16, 16);
+	public static Sprite stupid2 = new Sprite(16, 7, 7, SpriteSheet.tiles, 16, 16);
+	public static Sprite stupid3 = new Sprite(16, 7, 8, SpriteSheet.tiles, 16, 16);
+
+	public static Sprite stupid_right1 = new Sprite(16, 8, 6, SpriteSheet.tiles, 16, 16);
+	public static Sprite stupid_right2 = new Sprite(16, 8, 7, SpriteSheet.tiles, 16, 16);
+	public static Sprite stupid_right3 = new Sprite(16, 8, 8, SpriteSheet.tiles, 16, 16);
+
+	public static Sprite stupid_dead = new Sprite(16, 7, 9, SpriteSheet.tiles, 16, 16);
+
 	//Kondoria
 	public static Sprite kondoria_left1 = new Sprite(16, 10, 5, SpriteSheet.tiles, 16, 16);
 	public static Sprite kondoria_left2 = new Sprite(16, 10, 6, SpriteSheet.tiles, 16, 16);
@@ -106,7 +118,29 @@ public class Sprite {
 	public static Sprite kondoria_right3 = new Sprite(16, 11, 7, SpriteSheet.tiles, 16, 16);
 	
 	public static Sprite kondoria_dead = new Sprite(16, 10, 8, SpriteSheet.tiles, 16, 16);
-	
+
+	//intelligent
+	public static Sprite intelligent_left1 = new Sprite(16, 12, 5, SpriteSheet.tiles, 16, 16);
+	public static Sprite intelligent_left2 = new Sprite(16, 12, 6, SpriteSheet.tiles, 16, 16);
+	public static Sprite intelligent_left3 = new Sprite(16, 12, 7, SpriteSheet.tiles, 16, 16);
+
+	public static Sprite intelligent_right1 = new Sprite(16, 13, 5, SpriteSheet.tiles, 16, 16);
+	public static Sprite intelligent_right2 = new Sprite(16, 13, 6, SpriteSheet.tiles, 16, 16);
+	public static Sprite intelligent_right3 = new Sprite(16, 13, 7, SpriteSheet.tiles, 16, 16);
+
+	public static Sprite intelligent_dead = new Sprite(16, 12, 8, SpriteSheet.tiles, 16, 16);
+
+	//boss
+	public static Sprite boss_left1 = new Sprite(16, 4, 5, SpriteSheet.tiles, 16, 16);
+	public static Sprite boss_left2 = new Sprite(16, 4, 6, SpriteSheet.tiles, 16, 16);
+	public static Sprite boss_left3 = new Sprite(16, 4, 7, SpriteSheet.tiles, 16, 16);
+
+	public static Sprite boss_right1 = new Sprite(16, 5, 5, SpriteSheet.tiles, 16, 16);
+	public static Sprite boss_right2 = new Sprite(16, 5, 6, SpriteSheet.tiles, 16, 16);
+	public static Sprite boss_right3 = new Sprite(16, 5, 7, SpriteSheet.tiles, 16, 16);
+
+	public static Sprite boss_dead = new Sprite(16, 4, 8, SpriteSheet.tiles, 16, 16);
+
 	//ALL
 	public static Sprite mob_dead1 = new Sprite(16, 15, 0, SpriteSheet.tiles, 16, 16);
 	public static Sprite mob_dead2 = new Sprite(16, 15, 1, SpriteSheet.tiles, 16, 16);

@@ -1,9 +1,9 @@
 package com.carlosflorencio.bomberman.entities.tile;
 
-import com.carlosflorencio.bomberman.entities.Entity;
 import com.carlosflorencio.bomberman.graphics.Screen;
 import com.carlosflorencio.bomberman.graphics.Sprite;
 import com.carlosflorencio.bomberman.level.Coordinates;
+import com.carlosflorencio.bomberman.entities.Entity;
 
 public abstract class Tile extends Entity {
 	
@@ -26,4 +26,5 @@ public abstract class Tile extends Entity {
 	
 	@Override
 	public void update() {}
+
 }

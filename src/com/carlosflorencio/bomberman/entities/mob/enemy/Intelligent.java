@@ -10,7 +10,7 @@ public class Intelligent extends Enemy {
 
 
     public Intelligent(int x, int y, Board board) {
-        super(x, y, board, Sprite.intelligent_dead, Game.getPlayerSpeed() * 3 / 2, 1000);
+        super(x, y, board, Sprite.intelligent_dead, Game.getPlayerSpeed() / 2, 1500);
 
         _sprite = Sprite.intelligent_right1;
 

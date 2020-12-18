@@ -11,7 +11,7 @@ public class Boss extends Enemy {
 
 
     public Boss(int x, int y, Board board) {
-        super(x, y, board, Sprite.boss_dead, Game.getPlayerSpeed() * 2, 1000);
+        super(x, y, board, Sprite.boss_dead, Game.getPlayerSpeed() * 3 / 2, 2000);
 
         _sprite = Sprite.boss_right1;
 
