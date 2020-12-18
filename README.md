@@ -1,3 +1,2 @@
-# boom
-wang
-this is bomber
+#This is Quang game
+#Are you ok.
